@@ -1,0 +1,12 @@
+body {
+  font-family: "Arial";
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 0px;
+}
+.picture-frame {
+  border: 1px solid #aaaaaa;
+  background-color: #eeeeee;
+}

@@ -1,0 +1,17 @@
+p {
+  font-family: sans-serif;
+  font-size: 50;
+  font-weight: 200;
+  color: violet;
+}
+.neu {
+  color: blue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 80;
+}
+#neu {
+  color: red;
+  font-size: xx-large;
+  font-family: cursive;
+  font-weight: 200;
+}
