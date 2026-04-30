@@ -1,0 +1,115 @@
+<!--als erstes eine standard html datei erstellen. ein bild vom aufbau der Website machen.-->
+<html>
+  <head>
+    <title>Preisrechner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--als erstes erstelle ich einen container,die Fläche für die Buttons-->
+      <div class="calculator-container">
+        <!--unterteile die Fläche-->
+        <h1>Preisrechner</h1>
+        <!--erstelle als nächstes die 16 verschiedenen Buttons-->
+        <div class="order-buttons-grid">
+          <div class="order-button" onclick="addItemToOrder('Kaffee', 2)">
+            <span class="order-button-item">Kaffe</span>
+            <span class="order-button-item-price">2,00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Tee', 1.5)">
+            <span class="order-button-item">Tee</span>
+            <span class="order-button-item-price">1,50€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Wasser', 2.5)">
+            <span class="order-button-item">Wasser</span>
+            <span class="order-button-item-price">2,50€</span>
+          </div>
+          <div
+            class="order-button"
+            onclick="addItemToOrder('Apfelschorle', 2.5)"
+          >
+            <span class="order-button-item">Apfelschorle</span>
+            <span class="order-button-item-price">2,50€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Bratwurst', 5.5)">
+            <span class="order-button-item">Bratwurst</span>
+            <span class="order-button-item-price">5,50€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Schnitzel', 12.5)">
+            <span class="order-button-item">Schnitzel</span>
+            <span class="order-button-item-price">12,50€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Currywurst', 6.0)">
+            <span class="order-button-item">Pizza</span>
+            <span class="order-button-item-price">6,00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Brezel', 4.5)">
+            <span class="order-button-item">Brezel</span>
+            <span class="order-button-item-price">4,50€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Pommes', 3.5)">
+            <span class="order-button-item">Pommes</span>
+            <span class="order-button-item-price">3,50€</span>
+          </div>
+          <div
+            class="order-button"
+            onclick="addItemToOrder('Käsespätzle', 8.5)"
+          >
+            <span class="order-button-item">Käsespätzle</span>
+            <span class="order-button-item-price">8,50€</span>
+          </div>
+          <div
+            class="order-button"
+            onclick="addItemToOrder('Apfelstrudel', 4.5)"
+          >
+            <span class="order-button-item">Apfelstrudel</span>
+            <span class="order-button-item-price">4,50€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Berliner', 3.0)">
+            <span class="order-button-item">Berliner</span>
+            <span class="order-button-item-price">3,00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Backfisch', 5.0)">
+            <span class="order-button-item">Backfisch</span>
+            <span class="order-button-item-price">5,00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Leberkäse', 7.0)">
+            <span class="order-button-item">Leberkäse</span>
+            <span class="order-button-item-price">7,00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Brötchen', 2.5)">
+            <span class="order-button-item">Brötchen</span>
+            <span class="order-button-item-price">2,50€</span>
+          </div>
+          <div
+            class="order-button"
+            onclick="addItemToOrder('Kartoffelsalat', 4.5)"
+          >
+            <span class="order-button-item">Kartoffelsalat</span>
+            <span class="order-button-item-price">4,50€</span>
+          </div>
+        </div>
+        <div class="total-container">
+          <span>Gesamt</span><span id="total-value">0,00€</span>
+        </div>
+        <div class="checkout-container">
+          <div class="button" id="reset" onclick="reset()">Zurücksetzen</div>
+          <div class="checkout-location-container">
+            <div class="button" id="inhouse" onclick="checkoutInHouse()">
+              Vor Ort
+            </div>
+            <div class="button" id="delivery" onclick="checkoutDelivery()">
+              Lieferung
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--2. Fläche für die ausgegebenen Bestellungen-->
+      <div class="orders-container">
+        <h1 class="headline">Bestellungen</h1>
+        <div class="orders-items" id="orders-items"></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

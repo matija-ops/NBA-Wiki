@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function countNumber() {
+        const start = Number(document.getElementById("start").value);
+        const end = Number(document.getElementById("end").value);
+
+        let ungerade = 0;
+        let gerade = 0;
+
+        for (let count = start; count <= end; count++) {
+          const rest = count % 2;
+          if (rest === 0) {
+            //gerade
+            console.log("Die Zahl" + count + "ist gerade");
+            gerade++;
+          } else {
+            //ungerade
+            console.log("Die Zahl" + count + "ist ungerade");
+            ungerade++;
+          }
+        }
+        if (start > end) {
+          console.log("Die Startzahl darf nciht größer als die Endzahl sein");
+        } else {
+          console.log(
+            "Zwischen" +
+              start +
+              "und" +
+              end +
+              "gibt es" +
+              ungerade +
+              "ungerade und" +
+              gerade +
+              "gerade Zahlen",
+          );
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    Startzahl: <input type="number" id="start" /> Endzahl:
+    <input type="number" id="end" />
+    <button onclick="countNumber()">Start</button>
+  </body>
+</html>

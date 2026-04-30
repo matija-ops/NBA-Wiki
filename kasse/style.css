@@ -1,0 +1,163 @@
+* {
+  margin: 0; /*entfernt standard abstände*/
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8; /*seitenhintergrund hellgrau*/
+}
+
+.container {
+  display: flex; /*elemente nebeneinander*/
+  justify-content: center; /*horizontal zentriert*/
+  margin-top: 40px; /*Abstand nach oben*/
+  gap: 2rem; /*abstand zw spalten*/
+}
+
+/* Ziel--> zwei visuelle panels(calculator + orders)*/
+
+.calculator-container {
+  width: 600px; /*feste breite*/
+  background-color: white;
+  border-radius: 12px; /*abgerundete ecken*/
+  padding: 20px;/*innenabstand*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0, 0.8);/*schatten für card look*/
+}
+
+.orders-container { /*vom prinzip wie oben*/
+  background-color: white;
+  border-radius: 12px;
+  flex-direction: column;
+
+  
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0, 0.8);
+  width: 300px; /*schmalere sidebar als oben*/
+  display: flex;
+
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+
+
+/*GRID für buttons*/
+
+.order-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);/*4 gleich breite spalten*/
+  gap: 15px;/*Abstand zwischen Buttons*/
+}
+.orders-items {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-top: 1rem;
+  
+}
+.order-item {
+  border-bottom: #ddd solid 1px;
+  padding-bottom: 1rem;
+  
+}
+/* BUTTON BASIS*/
+.order-button {
+  min-height: 80px; /*einheitliche größe*/
+  background-color: #f9f9f9;
+  border-radius: 10px;/*abgerundet*/
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;/*horizontal*/
+  justify-content: center;/*vertikal*/
+  gap: 0, 5rem;
+  cursor: pointer;/*maus zeigt "klickbarkeit" an*/
+  border:#ddd solid 1px; /*leichter rand für definition*/   
+  
+}
+
+/*HOVER EFFEKT*/
+
+.order-button:hover {
+  background-color: #ececec; /*leicht dunkler beim hover*/
+  border:1PX solid #007bff;
+}
+
+/* PREIS TEXT. --->preis hervirheben*/
+
+.order-button-item-price {
+  color: #007bff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600; /*halb fette schrift*/
+  margin-top: 5px;
+}
+
+/*GESAMT - Bereich*/
+.total-container {
+  display: flex;
+  justify-content: space-between; /*links text, rechts preis*/
+  margin-top: 20px;
+  font-weight: bold; /*wichtig. dickere schrift*/
+  font-size: 18px;
+  border-top: 1px solid #ddd; /* dünne Linie */
+  margin-top: 15px; /* Abstand nach oben */
+  padding-top: 10px; /* Abstand zur Linie */
+  font-weight: bold;
+  text-align: right;
+
+}
+#total-value {
+  color: #007bff;
+}
+
+/* CHECKOUT - BEREICH / ZIEL --> vertikale Struktur*/
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.checkout-location-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.button {. /*generische buttons --> text in buttons zentrieren*/
+  text-align: center;
+}
+#reset {
+  background-color: #ff4d4d;
+  color: white;
+  border: none; /*kein rand*/
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#delivery {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+}
+#inhouse {
+  background-color: #28c76f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+#reset:hover, #delivery:hover, #inhouse:hover {
+    filter: brightness(0.8);
+
+}
+ 
+/* IDEE des Codes
+--> Flexbox für Layout & zentrierung
+--> Grid für Button-Raster
+--> Cards (Shadow + Radius) 
+--> Hover + Farben */
